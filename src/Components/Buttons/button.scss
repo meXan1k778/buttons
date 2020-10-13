@@ -1,0 +1,30 @@
+.react-btn {
+  margin-bottom: 6px;
+  cursor: pointer;
+  box-sizing: border-box;
+  width: 90px;
+  padding: 5px 15px;
+  background-color: #ffee22;
+  border-radius: 5px;
+  animation: moving-line 3s linear infinite alternate-reverse -1.5s;
+
+  &:hover {
+    opacity: 0.7;
+    animation-play-state: paused;
+  }
+  &:active {
+    background-color: rgba($color: rgba(218, 172, 45, 0.507), $alpha: 1);
+    border: 3px solid black;
+    padding: 4px 14px;
+  }
+}
+
+@keyframes moving-line {
+  0% {
+    transform: translateX(0px);
+  }
+
+  100% {
+    transform: translateX(600px);
+  }
+}

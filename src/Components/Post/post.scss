@@ -1,0 +1,24 @@
+.container__link {
+  margin-top: 8px;
+  a {
+    padding-left: 6px;
+
+    &:visited,
+    &:link {
+      color: rgba(144, 247, 9, 0.637);
+    }
+    &:hover {
+      color: #b10606;
+    }
+  }
+}
+.anticon-heart {
+  margin-right: 5px;
+  outline: none;
+}
+
+.active {
+  .anticon-heart {
+    color: red;
+  }
+}
