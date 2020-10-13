@@ -3,10 +3,13 @@ import {connect} from 'react-redux';
 import {DragDropContext,Droppable} from 'react-beautiful-dnd';
 import {Spin} from 'antd'
 import 'antd/dist/antd.css';
+import PropTypes from 'prop-types'
 import {sortPosts} from '../../actions/actions'
+
 
 import Post from '../Post/Post'
 
+// eslint-disable-next-line no-shadow
 const Posts =({posts, isLoading, sortPosts}) => {
 
     const onDragEnd = (result) =>{
@@ -22,16 +25,28 @@ return <>
             <Droppable droppableId="droppable-1">
                 {(provided)=>{
                     return <div {...provided.droppableProps} ref={provided.innerRef}>
-                                {elements}
-                                {spinner}
+                                        {elements}
+                                        {spinner}
                                 {provided.placeholder}
                             </div>
+                            
                 }  
                 }
-                
             </Droppable>
             </DragDropContext>
+        
+            
         </>
+}
+
+Posts.defaultProps = {
+    posts: []
+}
+
+Posts.propTypes = {
+    posts: PropTypes.arrayOf(PropTypes.object),
+    isLoading: PropTypes.bool.isRequired,
+    sortPosts: PropTypes.func.isRequired
 }
 
 const mapStateToProps = (state)=> {

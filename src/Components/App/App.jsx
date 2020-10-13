@@ -9,11 +9,11 @@ import './app.scss'
 const App = () => {
 
     return <>
-                <Provider store={store}>
-                    <div className="container">
+             <Provider store={store}>
+                 <div className="container">
                         <Buttons/>
                         <Posts/>
-                    </div>  
+                 </div>  
                 </Provider>
             </>
             

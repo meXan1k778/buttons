@@ -6,6 +6,7 @@
   padding: 5px 15px;
   background-color: #ffee22;
   border-radius: 5px;
+  outline: none;
   animation: moving-line 3s linear infinite alternate-reverse -1.5s;
 
   &:hover {
